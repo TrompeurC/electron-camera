@@ -29,7 +29,7 @@ getDevices()
     'rounded-full': config.rounded,
   }" class="  w-screen h-screen overflow-hidden"
     :style="`border: ${config.borderWidth}px solid ${config.borderColor}`">
-    <video class=" h-full object-cover" :class="{
+    <video class=" h-full w-full object-cover" :class="{
     'rounded-full': config.rounded,
   }" ref="videoRef"></video>
   </main>

@@ -1,3 +1,4 @@
+import { WindowSize } from './index.d';
 import { contextBridge, ipcRenderer } from 'electron'
 import { electronAPI } from '@electron-toolkit/preload'
 
@@ -8,6 +9,9 @@ const api = {
   },
   move(pos: {x:number, y: number}) {
     ipcRenderer.send('move', pos)
+  },
+  setWindowSize(size: WindowSize ) {
+    ipcRenderer.send('setWindowSize', size)
   }
 }
 

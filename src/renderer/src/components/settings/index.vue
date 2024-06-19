@@ -18,16 +18,16 @@ getOptions()
   <a-form class="settings-bg pt-9 flex justify-center flex-col items-center" :model="config">
     <p class="text-slate-200 mb-4">参数配置</p>
     <a-form-item name="deviceId" label="">
-      <a-select placeholder="please select your camera" v-model:value="config.deviceid" style="width: 220px">
+      <a-select placeholder="摄像头" v-model:value="config.deviceid" style="width: 220px">
         <a-select-option v-for="item of options" :key="item.deviceId" :value="item.deviceId">{{
     item.label }}</a-select-option>
       </a-select>
     </a-form-item>
     <a-form-item name="borderWidth">
-      <a-input-number v-model:value="config.borderWidth" :controls="false" style="width: 220px" />
+      <a-input-number placeholder="边框宽度" v-model:value="config.borderWidth" :controls="false" style="width: 220px" />
     </a-form-item>
     <a-form-item name="borderColor">
-      <a-input v-model:value="config.borderColor" style="width: 220px" />
+      <a-input placeholder="边框颜色" v-model:value="config.borderColor" style="width: 220px" />
     </a-form-item>
   </a-form>
 </template>

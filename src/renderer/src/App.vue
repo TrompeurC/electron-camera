@@ -25,6 +25,15 @@ const handleMenu = () => {
 }
 useDrag()
 
+const handleRounded = () => {
+  config.rounded = !config.rounded
+  if (config.rounded) {
+    window.api.setWindowSize({ aspectRatio: 1, width: 300, height: 300 })
+  } else {
+    window.api.setWindowSize({ aspectRatio: 16 / 9, width: 350, height: 197 })
+  }
+
+}
 
 </script>
 
@@ -40,7 +49,7 @@ useDrag()
     <Settings v-else />
     <Loading3QuartersOutlined
       class="hidden group-hover:block  cursor-pointer text-slate-100 absolute bottom-6 left-1/2 -translate-x-1/2"
-      v-if="config.currentTag === 'camera'" @click="config.rounded = !config.rounded" />
+      v-if="config.currentTag === 'camera'" @click="handleRounded" />
   </main>
   <!-- </Suspense> -->
 </template>

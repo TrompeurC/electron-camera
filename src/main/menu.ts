@@ -1,7 +1,7 @@
 import { Menu, ipcMain , app, type MenuItemConstructorOptions } from "electron";
 
 
-ipcMain.on('openMenu', (event) => {
+ipcMain.on('openMenu', (_event) => {
   const menuArrau: MenuItemConstructorOptions[] = [{
     label: '退出',
     click(_) {

@@ -4,18 +4,19 @@ import { electronApp, optimizer, is } from '@electron-toolkit/utils'
 import './menu'
 import './drag'
 import './ignoreMouseEvent'
+import "./windowSize"
 import icon from '../../resources/icon.png?asset'
 import createTray from './tray'
 
 function createWindow(): void {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
-    width: 300,
-    height: 300,
-    maxWidth: 500,
-    maxHeight: 500,
-    minWidth: 250,
-    minHeight: 250,
+    // width: 300,
+    // height: 300,
+    // maxWidth: 500,
+    // maxHeight: 500,
+    // minWidth: 250,
+    // minHeight: 250,
     x: 1500,
     y: 100,
     show: false,
